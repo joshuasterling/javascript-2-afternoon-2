@@ -155,10 +155,9 @@ function finder(array) {
   for (let i = 0; i < array.length; i++){
     if (array[i] === randomNumber) {
       return true;
-    } else {
-      return false;
     }
   }
+  return false;
 }
 
 ////////// PROBLEM 8 //////////
@@ -187,7 +186,24 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(myGroceryList, item) {
+  if (!myGroceryList || !item) {
+    return [];
+  }
+  if (myGroceryList.includes(item)) {
+    let itemIndex = myGroceryList.indexOf(item);
+    myGroceryList.splice(itemIndex, 1);
+  }
+  return myGroceryList;
+}
 
+function addItem(myGroceryList, item) {
+  if (!myGroceryList || !item) {
+    return [];
+  }
+  myGroceryList.push(item);
+  return myGroceryList;
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -197,8 +213,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
-
+function maker() {
+  let newArray = [];
+  for (let i = 1; i <= 215; i++) {
+    newArray.push(i);
+  }
+  console.log(newArray);
+  return newArray;
+}
 
 ////////// PROBLEM 10 //////////
 
@@ -213,8 +235,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
-
+function addTen(numbers) {
+  let newNumbers = [];
+  for (let i = 0; i < numbers.length; i++) {
+    let j = parseInt(numbers[i]);
+    newNumbers.push(j + 10);
+  }
+  return newNumbers;
+}
 
 ////////// PROBLEM 11 //////////
 
@@ -239,6 +267,13 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
+function longer(arr1, arr2) {
+  if (arr1.length >= arr2.length) {
+    return arr1;
+  } else if (arr2.length > arr1.length) {
+    return arr2;
+  }
+}
 
 
 /*
@@ -250,8 +285,11 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
-
+function both(arr1, arr2) {
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = i + 1; )
+  }
+}
 
 ////////// PROBLEM 12 //////////
 
