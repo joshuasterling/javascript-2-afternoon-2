@@ -275,7 +275,6 @@ function longer(arr1, arr2) {
   }
 }
 
-
 /*
   As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
@@ -285,11 +284,19 @@ function longer(arr1, arr2) {
 */
 
 //Code Here
+let newArray = [];
 function both(arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) {
-    for (let j = i + 1; )
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        newArray.push(arr1[i]);
+      }
+    }
   }
-}
+  return newArray;
+};
+
+// console.log(newArray);
 
 ////////// PROBLEM 12 //////////
 
@@ -329,8 +336,7 @@ var colt = {
 */
 
 //Code Here
-
-
+devMountainEmployees = [joe, cahlan, ryan, colt];
 
 /*
   Now let's say Cahlan has to take a leave of absence.
@@ -338,11 +344,13 @@ var colt = {
 */
 
 //Code Here
-
-
+  for (let i = 0; i < devMountainEmployees.length; i++) {
+    if (devMountainEmployees[i] === cahlan) {
+      devMountainEmployees.splice(i, 1);
+    }
+  }
 
 ////////// PROBLEM 13 //////////
-
 
 /*
   A very clean way to pass around large LISTS (arrays) of COLLECTIONS (objects) of data is to have an array full of objects. 
@@ -350,8 +358,7 @@ var colt = {
 */
 
 //Code Here
-
-
+let users = [];
 
 /*
   Now add three user objects to your users array. Each user object should contain the following properties: name, email, password, username.
@@ -371,8 +378,21 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+var user2 = {
+  name: 'Josh Smith',
+  email: 'josh.smith@devmounta.in',
+  password: 'hunter2',
+  username: 'ihazcode'
+};
 
+var user3 = {
+  name: 'Roger Roger',
+  email: 'roger.roger@devmounta.in',
+  password: 'hunter2',
+  username: 'ihazcode'
+};
 
+users.push(user1, user2, user3);
 
 /*
   Now you have a very common data structure. 
@@ -385,8 +405,11 @@ var user1 = {
 */
 
 //Code Here
-
-
+for (let i = 0; i < users.length; i++) {
+  if (users[i].email === "mark.mciver@devmounta.in") {
+    users.splice(i, 1);
+  }
+}
 
 /*
   The activity we just did is very much how data works in 'the real world'.
